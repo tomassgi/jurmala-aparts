@@ -3,9 +3,6 @@ import csv
 
 apartments = []
 
-def sort_price(apartment):
-    return apartment[8]
-
 # https://www.w3schools.com/python/python_file_handling.asp
 # https://www.w3schools.in/python/file-handling
 with open('jurmala.csv', newline='', encoding='utf-8') as csv_file:
@@ -31,12 +28,9 @@ while True:
     choice = input("Enter your choice (1-6): ")
 
     if choice == '1':
-        print(apartments[int(input("Which one?"))])
         # https://www.w3schools.com/python/python_lists_access.asp
         pass
     elif choice == '2':
-        apartments.sort(key = sort_price)
-        print(apartments[:10])
         # https://www.w3schools.com/python/python_lists_sort.asp
         pass
     elif choice == '3':
