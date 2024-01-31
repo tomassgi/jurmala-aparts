@@ -5,7 +5,7 @@ apartments = []
 
 # https://www.w3schools.com/python/python_file_handling.asp
 # https://www.w3schools.in/python/file-handling
-with open('jurmala.csv', newline='') as csv_file:
+with open('jurmala.csv', newline='', encoding='utf-8') as csv_file:
     file_reader = csv.reader(csv_file, delimiter = ',', quotechar='|')
 
     for row in file_reader:
