@@ -1,4 +1,3 @@
-
 import csv
 
 apartments = []
@@ -29,20 +28,50 @@ while True:
 
     if choice == '1':
         # https://www.w3schools.com/python/python_lists_access.asp
+        user_choice = int(input("Enter the apartament's sequence number"))
+        print(apartments[user_choice])
         pass
     elif choice == '2':
         # https://www.w3schools.com/python/python_lists_sort.asp
+        def sorting(apartment):
+            return int(apartment[-1])
+        apartments.sort(key = sorting, reverse = True)
+        print (apartments[0:10])
         pass
     elif choice == '3':
         # https://www.w3schools.com/python/python_lists_sort.asp
+        def sorting2(apartment1):
+            return int(apartment1[-1])
+        apartments.sort(key = sorting2)
+        print (apartments[0:10])
         pass
     elif choice == '4':
         # https://www.w3schools.com/python/python_lists_comprehension.asp
         # https://www.w3schools.com/python/python_lists_access.asp - Range of Indexes
+        amount = 0
+        apartments2 = int(input("What is your maximum price you would like to pay"))
+        def sorting3(apartments3):
+            return int(apartment3[-1])
+        apartments.sort(key = sorting3, reverse = True)
+        for element in apartments:
+            if int(element[-1])<=apartments2:
+                if amount<=20:
+                    print(element)
+                    amount = amount+1
         pass
     elif choice == '5':
         # https://www.w3schools.com/python/python_lists_comprehension.asp
         # https://www.w3schools.com/python/python_lists_access.asp - Range of Indexes
+        amount2 = 0
+        apartments4 = int(input("What is your maximum price you would like to pay"))
+        def sorting4(apartments5):
+            return int(apartment5[-1])
+        apartments.sort(key = sorting4)
+        for element in apartments:
+            if int(element[-1])<=apartments4:
+                if amount2>=20:
+                    print(element)
+                    amount2 = amount2+1
         pass
 
     elif choice == '6':
@@ -55,5 +84,7 @@ while True:
         print("Invalid choice, choose from 1 to 7")
 
     print("==========================")
+
+
 
 
